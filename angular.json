@@ -8,7 +8,7 @@
       "prefix": "nx-tailwind-test",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/nx-tailwind",
             "index": "apps/nx-tailwind/src/index.html",
@@ -21,10 +21,7 @@
               "apps/nx-tailwind/src/assets"
             ],
             "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "apps/nx-tailwind/src/styles.scss"],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "webpack.config.js"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -57,7 +54,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "nx-tailwind:build"
           },
