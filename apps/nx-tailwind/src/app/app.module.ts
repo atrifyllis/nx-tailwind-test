@@ -10,7 +10,14 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatButtonModule, ReactiveFormsModule, FormlyModule.forRoot({ extras: { lazyRender: true } }), FormlyMaterialModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyMaterialModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
