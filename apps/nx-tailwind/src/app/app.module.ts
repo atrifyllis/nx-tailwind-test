@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
+import { dataCyExtension } from './data-cy.extension';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +16,15 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyModule.forRoot({
+      extras: { lazyRender: true },
+      extensions: [
+        {
+          name: 'data-cy-extension',
+          extension: dataCyExtension,
+        },
+      ],
+    }),
     FormlyMaterialModule,
   ],
   providers: [],
