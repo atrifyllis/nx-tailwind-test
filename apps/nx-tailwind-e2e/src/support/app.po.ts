@@ -1,3 +1,5 @@
+export const TEAL = 'rgb(20, 184, 166)';
+
 export const getGreeting = () => cy.get('[data-cy=tailwind-title]');
 
 export const getPrimaryButton = () => cy.get('[data-cy=primary]');

@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { dataCyExtension } from './data-cy.extension';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +17,8 @@ import { dataCyExtension } from './data-cy.extension';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
     ReactiveFormsModule,
     FormlyModule.forRoot({
       extras: { lazyRender: true },

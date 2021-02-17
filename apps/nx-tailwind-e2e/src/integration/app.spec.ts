@@ -3,12 +3,14 @@ import {
   getEmailValidationErrorText,
   getGreeting,
   getPrimaryButton,
+  TEAL,
 } from '../support/app.po';
 
 // Function helper example, see `../support/app.po.ts` file
-const TEAL = 'rgb(20, 184, 166)';
+
 describe('nx-tailwind', () => {
   beforeEach(() => cy.visit('/'));
+  // beforeEach(() => cy.viewport('iphone-6'));
   it('should display welcome message and correct colors for tailwind and material', () => {
     // Custom command example, see `../support/commands.ts` file
     // cy.login('my-email@something.com', 'myPassword');
