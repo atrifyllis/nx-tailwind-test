@@ -21,6 +21,11 @@ export class AppComponent {
         placeholder: 'Enter email',
         required: true,
       },
+      validation: {
+        messages: {
+          required: 'Please fill-in the email',
+        },
+      },
     },
   ];
 
