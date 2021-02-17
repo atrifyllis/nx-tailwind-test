@@ -12,6 +12,7 @@ describe('nx-tailwind', () => {
   beforeEach(() => cy.visit('/'));
   // beforeEach(() => cy.viewport('iphone-6'));
   it('should display welcome message and correct colors for tailwind and material', () => {
+    // cy.viewport(320, 480)
     // Custom command example, see `../support/commands.ts` file
     // cy.login('my-email@something.com', 'myPassword');
     getGreeting().contains('TailwindCSS').and('have.css', 'color', TEAL); // checks that tailwind is loaded correctly
