@@ -11,7 +11,7 @@
   <span>Nx Tailwind Angular</span>
   <div class="hidden md:block">
     <span class="example-spacer"></span>
-    <ng-container *ngFor="let menuItem of MENU_ITEMS">
+    <ng-container *ngFor="let menuItem of menuItems">
       <a data-cy="menu-button" href="#" mat-button>{{ menuItem }}</a>
     </ng-container>
   </div>
@@ -21,7 +21,7 @@
   <
   <mat-sidenav #sidenav>
     <mat-nav-list>
-      <ng-container *ngFor="let menuItem of MENU_ITEMS">
+      <ng-container *ngFor="let menuItem of menuItems">
         <a href="#" mat-list-item>{{ menuItem }}</a>
       </ng-container>
     </mat-nav-list>
