@@ -3,6 +3,7 @@
     mat-icon-button
     class="example-icon md:hidden"
     aria-label="Example icon-button with menu icon"
+    data-cy="burger-button"
     (click)="sidenav.toggle()"
   >
     <mat-icon>menu</mat-icon>
@@ -11,7 +12,7 @@
   <div class="hidden md:block">
     <span class="example-spacer"></span>
     <ng-container *ngFor="let menuItem of MENU_ITEMS">
-      <a href="#" mat-button>Menu{{ menuItem }}</a>
+      <a data-cy="menu-button" href="#" mat-button>{{ menuItem }}</a>
     </ng-container>
   </div>
 </mat-toolbar>
@@ -21,7 +22,7 @@
   <mat-sidenav #sidenav>
     <mat-nav-list>
       <ng-container *ngFor="let menuItem of MENU_ITEMS">
-        <a href="#" mat-list-item>Menu{{ menuItem }}</a>
+        <a href="#" mat-list-item>{{ menuItem }}</a>
       </ng-container>
     </mat-nav-list>
   </mat-sidenav>
