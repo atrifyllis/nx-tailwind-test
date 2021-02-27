@@ -11,8 +11,22 @@ export class AppComponent {
   title = 'nx-tailwind';
 
   form = new FormGroup({});
-  model = { email: 'email@gmail.com' };
+  model = { name: 'alex', email: 'email@gmail.com' };
   fields: FormlyFieldConfig[] = [
+    {
+      key: 'name',
+      type: 'input',
+      templateOptions: {
+        label: 'Name',
+        placeholder: 'Enter your name',
+        required: true,
+      },
+      validation: {
+        messages: {
+          required: 'Please fill-in your name',
+        },
+      },
+    },
     {
       key: 'email',
       type: 'input',
