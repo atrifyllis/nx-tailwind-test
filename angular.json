@@ -142,6 +142,31 @@
           }
         }
       }
+    },
+    "ui-home-page": {
+      "projectType": "library",
+      "root": "libs/ui-home-page",
+      "sourceRoot": "libs/ui-home-page/src",
+      "prefix": "nx-tailwind-test",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-home-page/src/**/*.ts",
+              "libs/ui-home-page/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-home-page"],
+          "options": {
+            "jestConfig": "libs/ui-home-page/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

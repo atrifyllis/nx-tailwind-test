@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-tailwind-test/ui-nav-menu": ["libs/ui-nav-menu/src/index.ts"]
+      "@nx-tailwind-test/ui-nav-menu": ["libs/ui-nav-menu/src/index.ts"],
+      "@nx-tailwind-test/ui-home-page": ["libs/ui-home-page/src/index.ts"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,

@@ -3,21 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { dataCyExtension } from './data-cy.extension';
 import { LayoutModule } from '@angular/cdk/layout';
 import { UiNavMenuModule } from '@nx-tailwind-test/ui-nav-menu';
+import { UiHomePageModule } from '@nx-tailwind-test/ui-home-page';
+import { RouterModule } from '@angular/router';
+import { HomePageComponent } from '../../../../libs/ui-home-page/src/lib/home-page/home-page.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    ReactiveFormsModule,
     FormlyModule.forRoot({
       extras: { lazyRender: true },
       extensions: [
@@ -30,6 +29,13 @@ import { UiNavMenuModule } from '@nx-tailwind-test/ui-nav-menu';
     FormlyMaterialModule,
     LayoutModule,
     UiNavMenuModule,
+    UiHomePageModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: HomePageComponent,
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
