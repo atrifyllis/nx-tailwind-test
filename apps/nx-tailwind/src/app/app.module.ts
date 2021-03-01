@@ -8,21 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { dataCyExtension } from './data-cy.extension';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { UiNavMenuModule } from '@nx-tailwind-test/ui-nav-menu';
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
     ReactiveFormsModule,
     FormlyModule.forRoot({
       extras: { lazyRender: true },
@@ -35,8 +29,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     }),
     FormlyMaterialModule,
     LayoutModule,
-    MatSidenavModule,
-    MatListModule,
+    UiNavMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

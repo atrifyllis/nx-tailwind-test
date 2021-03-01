@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'nx-tailwind-test-nav-menu',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
-  readonly MENU_ITEMS = ['Menu Item 1', 'Menu Item 2'];
+  @Input() menuItems: string[] = [];
 }

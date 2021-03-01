@@ -10,6 +10,8 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 export class AppComponent {
   title = 'nx-tailwind';
 
+  menuItems = ['Menu Item 1', 'Menu Item 2'];
+
   form = new FormGroup({});
   model = { name: 'alex', email: 'email@gmail.com' };
   fields: FormlyFieldConfig[] = [
@@ -42,7 +44,6 @@ export class AppComponent {
       },
     },
   ];
-
   onSubmit() {
     console.log(this.model);
   }
