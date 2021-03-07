@@ -11,6 +11,11 @@ import { UiNavMenuModule } from '@nx-tailwind-test/ui-nav-menu';
 import { UiHomePageModule } from '@nx-tailwind-test/ui-home-page';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from '../../../../libs/ui-home-page/src/lib/home-page/home-page.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +41,19 @@ import { HomePageComponent } from '../../../../libs/ui-home-page/src/lib/home-pa
         component: HomePageComponent,
       },
     ]),
+    StoreModule.forRoot(
+      {},
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true,
+        },
+      }
+    ),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
