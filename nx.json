@@ -18,6 +18,7 @@
   "projects": {
     "nx-tailwind": { "tags": [] },
     "nx-tailwind-e2e": { "tags": [], "implicitDependencies": ["nx-tailwind"] },
-    "ui-nav-menu": { "tags": [] }
+    "ui-nav-menu": { "tags": [] },
+    "ui-home-page": { "tags": [] }
   }
 }
