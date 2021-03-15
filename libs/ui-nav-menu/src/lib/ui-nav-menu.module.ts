@@ -11,6 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromUiNavMenu from './+state/ui-nav-menu/ui-nav-menu.reducer';
 import { UiNavMenuEffects } from './+state/ui-nav-menu/ui-nav-menu.effects';
 import { UiNavMenuFacade } from './+state/ui-nav-menu/ui-nav-menu.facade';
+import { NavMenuContainerComponent } from './nav-menu/nav-menu-container.component';
 
 @NgModule({
   imports: [
@@ -21,13 +22,13 @@ import { UiNavMenuFacade } from './+state/ui-nav-menu/ui-nav-menu.facade';
     MatToolbarModule,
     MatIconModule,
     StoreModule.forFeature(
-      fromUiNavMenu.UINAVMENU_FEATURE_KEY,
+      fromUiNavMenu.UI_NAV_MENU_FEATURE_KEY,
       fromUiNavMenu.reducer
     ),
     EffectsModule.forFeature([UiNavMenuEffects]),
   ],
-  declarations: [NavMenuComponent],
-  exports: [NavMenuComponent],
+  declarations: [NavMenuComponent, NavMenuContainerComponent],
+  exports: [NavMenuContainerComponent],
   providers: [UiNavMenuFacade],
 })
 export class UiNavMenuModule {}

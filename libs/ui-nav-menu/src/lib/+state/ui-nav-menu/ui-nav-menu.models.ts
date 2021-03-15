@@ -3,4 +3,5 @@
  */
 export interface UiNavMenuEntity {
   id: string | number; // Primary ID
+  label: string;
 }

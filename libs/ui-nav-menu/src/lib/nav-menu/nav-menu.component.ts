@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiNavMenuEntity } from '@nx-tailwind-test/ui-nav-menu';
 
 @Component({
   selector: 'nx-tailwind-test-nav-menu',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
-  @Input() menuItems: string[] = [];
+  @Input() menuItems: UiNavMenuEntity[] | null = [];
 }

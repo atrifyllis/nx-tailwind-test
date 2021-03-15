@@ -4,6 +4,7 @@ import { select, Store } from '@ngrx/store';
 
 import * as UiNavMenuActions from './ui-nav-menu.actions';
 import * as UiNavMenuSelectors from './ui-nav-menu.selectors';
+import { UiNavMenuPartialState } from './ui-nav-menu.reducer';
 
 @Injectable()
 export class UiNavMenuFacade {
@@ -15,7 +16,7 @@ export class UiNavMenuFacade {
   allUiNavMenu$ = this.store.pipe(select(UiNavMenuSelectors.getAllUiNavMenu));
   selectedUiNavMenu$ = this.store.pipe(select(UiNavMenuSelectors.getSelected));
 
-  constructor(private store: Store) {}
+  constructor(private store: Store<UiNavMenuPartialState>) {}
 
   /**
    * Use the initialization action to perform one

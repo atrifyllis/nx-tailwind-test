@@ -12,7 +12,7 @@
   <div class="hidden md:block">
     <span class="example-spacer"></span>
     <ng-container *ngFor="let menuItem of menuItems">
-      <a data-cy="menu-button" href="#" mat-button>{{ menuItem }}</a>
+      <a data-cy="menu-button" href="#" mat-button>{{ menuItem.label }}</a>
     </ng-container>
   </div>
 </mat-toolbar>
