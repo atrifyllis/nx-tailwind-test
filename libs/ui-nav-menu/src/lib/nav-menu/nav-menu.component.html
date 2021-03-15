@@ -21,8 +21,10 @@
   <
   <mat-sidenav #sidenav>
     <mat-nav-list>
-      <ng-container *ngFor="let menuItem of menuItems">
-        <a href="#" mat-list-item>{{ menuItem }}</a>
+      <ng-container *ngFor="let menuItem of menuItems; index as i">
+        <a href="#" mat-list-item [attr.data-cy]="'sidenav-item-' + i">{{
+          menuItem.label
+        }}</a>
       </ng-container>
     </mat-nav-list>
   </mat-sidenav>

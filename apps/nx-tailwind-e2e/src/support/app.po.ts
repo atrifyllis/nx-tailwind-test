@@ -12,3 +12,5 @@ export const getEmailValidationErrorText = () =>
 export const getFirstMenuButton = () => cy.get('[data-cy=menu-button]').first();
 
 export const getBurgerMenuButton = () => cy.get('[data-cy=burger-button]');
+
+export const getFirstSidenavMenuItem = () => cy.get('[data-cy=sidenav-item-0]');

@@ -3,6 +3,7 @@ import {
   getEmailInputField,
   getEmailValidationErrorText,
   getFirstMenuButton,
+  getFirstSidenavMenuItem,
   getGreeting,
   getPrimaryButton,
   TEAL,
@@ -31,5 +32,13 @@ describe('nx-tailwind', () => {
 
     getFirstMenuButton().should('not.be.visible');
     getBurgerMenuButton().should('be.visible');
+  });
+
+  it('should show sidenav menu when clicking on burger icon', () => {
+    cy.viewport(320, 480);
+
+    getBurgerMenuButton().click();
+
+    getFirstSidenavMenuItem().contains('Menu Item 1');
   });
 });
